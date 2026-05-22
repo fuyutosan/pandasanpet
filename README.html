@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codex Panda Pet の使い方</title>
+    <style>
+      :root {
+        --green: #079C15;
+        --green-dark: #056f10;
+        --ink: #171717;
+        --paper: #fbfffb;
+        --pink: #ef6aa4;
+        --line: rgba(23, 23, 23, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at 16% 10%, rgba(7, 156, 21, 0.18), transparent 30%),
+          radial-gradient(circle at 86% 18%, rgba(239, 106, 164, 0.14), transparent 24%),
+          linear-gradient(180deg, #fbfffb 0%, #effff2 100%);
+        line-height: 1.75;
+      }
+
+      main {
+        width: min(940px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 180px;
+        gap: 24px;
+        align-items: center;
+        padding: 28px;
+        border: 2px solid var(--ink);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 10px 10px 0 rgba(7, 156, 21, 0.15);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(32px, 6vw, 58px);
+        line-height: 1.08;
+      }
+
+      .lead {
+        margin: 18px 0 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: rgba(23, 23, 23, 0.72);
+      }
+
+      .hero img {
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
+        filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.18));
+      }
+
+      section {
+        margin-top: 28px;
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.74);
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: 26px;
+      }
+
+      ol,
+      ul {
+        margin: 0;
+        padding-left: 1.35em;
+        font-weight: 700;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      code {
+        padding: 2px 6px;
+        border-radius: 5px;
+        background: #eaffed;
+        color: var(--green-dark);
+        font-family: Consolas, "Courier New", monospace;
+        font-weight: 800;
+      }
+
+      .callout {
+        border-color: rgba(7, 156, 21, 0.28);
+        background: linear-gradient(135deg, rgba(7, 156, 21, 0.12), rgba(255, 255, 255, 0.88));
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        border-radius: 999px;
+        color: #fff;
+        background: var(--green);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      @media (max-width: 680px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero img {
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <div>
+          <span class="badge">Windows向け</span>
+          <h1>Codex Panda Pet の使い方</h1>
+          <p class="lead">
+            デスクトップにパンダさんが住みつく、小さなローカルアプリです。
+            ネット通信なしで動きます。
+          </p>
+        </div>
+        <img src="./panda-reference.png" alt="パンダさん">
+      </div>
+
+      <section class="callout">
+        <h2>起動方法</h2>
+        <ol>
+          <li>ZIPを解凍します。</li>
+          <li>フォルダの中にある <code>Start-PandaPet.bat</code> をダブルクリックします。</li>
+          <li>デスクトップにパンダさんが表示されます。</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>操作方法</h2>
+        <ul>
+          <li>左クリックしてドラッグ: パンダさんを移動</li>
+          <li>クリック: びっくりリアクション</li>
+          <li>右クリック: サイズを切り替え</li>
+          <li>マウスホイール: 細かく拡大・縮小</li>
+          <li>終了: パンダさんのウィンドウを選んで <code>Alt + F4</code></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>パンダさんがすること</h2>
+        <ul>
+          <li>ころころ転がる</li>
+          <li>笹をもぐもぐする</li>
+          <li>寝る</li>
+          <li>ゆらゆらする</li>
+          <li>ぽよんと跳ねる</li>
+          <li>たまに「パンダさんパワー！」と言う</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>注意</h2>
+        <ul>
+          <li>現在はWindows向けです。Macには対応していません。</li>
+          <li>Windowsの保護メッセージが出た場合は、内容を確認してから実行してください。</li>
+          <li>ファイル名やフォルダ構成を変えると、画像が表示されない場合があります。</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
